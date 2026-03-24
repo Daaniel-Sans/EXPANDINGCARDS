@@ -1,0 +1,29 @@
+:root {
+        --amarillo: #ffe600;
+        --negro-digital: #111;
+        --gris-medio: #d9d9d9;
+        --gris-claro: #e8e8e8;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.container {
+    display: flex;
+    width: 90vh;
+}
+
+.panel {
+    background-size: cover;
+}
