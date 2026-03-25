@@ -4,32 +4,34 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Expanding Cards</title>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+
 </head>
 <body>
     <div class="container">
         <div class="panel active">
             <h3>01</h3>
-            <h3>¿Por qué importa?</h3>
-            <p>Porque el vibe coding reduce drásticamente la barrera entre una idea y un producto creado, permitiendo a los equipos probar herramientas, páginas web o prototipos interactivos sin depender siempre de desarrollo. Esto significa más autonomía y velocidad para crear activos digitales.</p>
+            <h3>¿Qué es esto?</h3>
+            <p>Este componente es un conjunto de tarjetas expandibles construidas con HTML, CSS y JavaScript puro. Al hacer clic en cualquiera de ellas, se expande suavemente revelando su contenido mientras las demás se contraen, creando una experiencia de navegación limpia e intuitiva.</p>
             <button>+</button>
         </div>    
         <div class="panel">
             <h3>02</h3>
-            <h3>¿En qué consiste?</h3>
-            <p>El vibe coding consiste en explicar muy bien al sistema lo que quieres hacer desde una habilidad que llevamos años perfeccionando: el prompting. La persona que desarrolla pasa a desempeñar un papel más parecido al de la dirección de una orquesta: conversa, marca el objetivo de la aplicación tal y como se la imagina y afina el resultado iterativamente mientras la IA se ocupa de hacer un código que funcione.</p>
+            <h3>¿Cómo funciona?</h3>
+            <p>Cada tarjeta escucha un evento de clic con JavaScript. Al activarse, se añade una clase active que modifica el valor de flex y la opacidad mediante transiciones CSS. Cuando se activa una nueva tarjeta, la anterior pierde su clase y vuelve a su estado original.</p>
             <button>+</button>
         </div>    
         <div class="panel">
             <h3>03</h3>
-            <h3>¿Me debería preocupar?</h3>
-            <p>Afecta a cualquier persona sin conocimientos de desarrollo que tenga una idea para un producto digital, porque ya no necesitará depender de tantos intermediarios para materializar una primera versión. Se acorta el tiempo entre decisión y ejecución y el prototipado es más libre.</p>
+            <h3> ¿Qué técnicas usa?</h3>
+            <p>El proyecto combina flexbox para distribuir las tarjetas en el layout, transiciones CSS para animar la expansión y el cambio de color, y manipulación del DOM con querySelector y classList para gestionar el estado activo de cada tarjeta en cada momento.</p>
             <button>+</button>
         </div>    
         <div class="panel">
             <h3>04</h3>
-            <h3>¿Qué puedo hacer?</h3>
-            <p>Pruébalo como un experimento pequeño y acotado: plantea una necesidad concreta y trata de resolverla con una herramienta de IA, aunque el resultado no sea perfecto. Evalúa posibilidades y habla de ello con tu equipo.</p>
+            <h3>¿Qué he aprendido?</h3>
+            <p>Construir este componente ha servido para entender cómo combinar CSS y JavaScript para crear interfaces interactivas sin librerías externas. También ha puesto en práctica conceptos como la gestión de estados, las transiciones encadenadas y la importancia de separar lógica visual y comportamiento.</p>
             <button>+</button>
         </div>    
 

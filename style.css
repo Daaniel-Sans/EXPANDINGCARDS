@@ -1,30 +1,28 @@
 :root {
-        --amarillo: #ffe600;
-        --negro-digital: #111;
-        --gris-medio: #d9d9d9;
-        --gris-claro: #e8e8e8;
+    --color-texto: #2A2A2A;
+    --color-tarjeta: #aeb2ac;
+    --color-tarjeta-activa: #e9ece6;
+    --color-fondo: #6c6c6c;
 }
-
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-
 body {
+    background-color: var(--color-fondo);
     display: flex;
     align-items: center;
     justify-content: center;
     height: 100vh;
     overflow: hidden;
+    font-family: 'Plus Jakarta Sans', sans-serif;
 }
-
 .container {
     display: flex;
     width: 90vw;
     height: 80vh;
 }
-
 .panel {
     transition: all 0.7s ease;
     background-size: cover;
@@ -38,44 +36,76 @@ body {
     flex-direction: column;
     justify-content: space-between;
     border-radius: 8px;
-    background-color: var(--gris-claro);
+    background-color: var(--color-tarjeta);
+    color: var(--color-texto);
     cursor: pointer;
 }
-
+.panel h3:first-child {
+    margin-bottom: 16px;
+}
 .panel.active {
     flex: 5;
-    background-color: var(--amarillo);
+    background-color: var(--color-tarjeta-activa);
+    color: var(--color-texto);
     justify-content: space-between;
 }
-
 .panel:not(.active) {
     flex: 1;
 }
-
 .panel p {
     opacity: 0;
     height: 0;
     overflow: hidden;
     margin: 0;
 }
-
 .panel.active p {
     opacity: 1;
     height: auto;
     margin-top: auto;
     margin-bottom: auto;
 }
-
 button {
-    background-color: var(--negro-digital);
-    color: var(--gris-claro);
+    background-color: var(--color-texto);
+    color: var(--color-tarjeta-activa);
     border-radius: 9999px;
     width: 48px;
     height: 48px;
     border: none;
-    font-size: 24;
+    font-size: 24px;
     cursor: pointer;
     align-self: flex-end;
-    
 }
-
+@media (max-width: 1024px) {
+    body {
+        height: auto;
+        min-height: 100vh;
+        overflow-y: auto;
+        align-items: flex-start;
+        padding: 20px 0;
+    }
+    .container {
+        flex-direction: column;
+        width: 100vw;
+        padding: 16px;
+        height: auto;
+        gap: 16px;
+    }
+    .panel {
+        height: auto;
+        min-height: 80px;
+        margin: 0;
+    }
+    .panel.active {
+        flex: 5;
+        min-height: 300px;
+    }
+    .panel:not(.active) {
+        flex: 1;
+    }
+    .panel.active p {
+        opacity: 1;
+        height: auto;
+        margin-top: auto;
+        margin-bottom: auto;
+    }
+}
